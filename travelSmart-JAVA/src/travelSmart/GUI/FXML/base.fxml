@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="1200.0" stylesheets="@../../RESSOURCES/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="17.0" layoutY="20.0" prefHeight="39.0" prefWidth="1166.0" styleClass="bar">
+         <children>
+            <ImageView fx:id="logo" fitHeight="35.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" styleClass="logo_btn">
+               <image>
+                  <Image url="@../../RESSOURCES/images/logo-travelSmart.png" />
+               </image>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="24.0" prefWidth="4.0" />
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="45.0" styleClass="home_btn" />
+            <Pane prefHeight="40.0" prefWidth="461.0" HBox.hgrow="ALWAYS" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" styleClass="search_btn">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+            <TextField prefHeight="33.0" prefWidth="201.0">
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <MenuButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="57.0" styleClass="notif_btn">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </MenuButton>
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleExitButtonAction" prefHeight="35.0" styleClass="pie_btn" text="Stats" />
+            <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" styleClass="profile_btn" text="Name">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+
+            </MenuButton>
+            <Separator minHeight="-Infinity" orientation="VERTICAL" prefHeight="35.0" />
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="40.0" styleClass="signout_btn" />
+         </children>
+      </HBox>
+      <HBox layoutX="21.0" layoutY="566.0" prefHeight="33.0" prefWidth="1166.0" styleClass="bar">
+         <children>
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" styleClass="facebook_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" styleClass="googleplus_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="googlemap_btn" />
+            <Pane minHeight="-Infinity" prefHeight="30.0" prefWidth="965.0" HBox.hgrow="ALWAYS" />
+            <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="463.0" text="(c) 2015 H4Y3 All Rights Reserved" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

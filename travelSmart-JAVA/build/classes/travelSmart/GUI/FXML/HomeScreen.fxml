@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="610.0" prefWidth="1200.0" stylesheets="@../../RESSOURCES/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="travelSmart.GUI.FXML.HomeScreenController">
+         <children>
+            <HBox fx:id="hboxNav" layoutX="17.0" layoutY="20.0" prefHeight="39.0" prefWidth="1166.0" styleClass="bar">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="35.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" styleClass="logo_btn">
+                     <image>
+                        <Image url="@../../RESSOURCES/images/logo-travelSmart.png" />
+                     </image>
+                  </ImageView>
+                  <Separator orientation="VERTICAL" prefHeight="24.0" prefWidth="4.0" />
+                  <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="45.0" styleClass="home_btn" />
+                  <Pane prefHeight="40.0" prefWidth="269.0" HBox.hgrow="ALWAYS" />
+                  <MenuButton fx:id="notif_btn" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="57.0" styleClass="notif_btn">
+                     <items>
+                        <MenuItem fx:id="newMessages" mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" />
+                     </items>
+                  </MenuButton>
+                  <Button fx:id="dashbord_btn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showDashbord" prefHeight="35.0" styleClass="pie_btn" text="Dashbord" />
+            <Button fx:id="login_btn" alignment="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#launchLoginForm" prefHeight="40.0" prefWidth="118.0" styleClass="Login_btn" text="Login" HBox.hgrow="ALWAYS" />
+            <MenuButton fx:id="userMenu" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="154.0" styleClass="profile_btn" text="Name" HBox.hgrow="ALWAYS">
+               <items>
+                  <MenuItem disable="true" mnemonicParsing="false" text="Profile" />
+                  <MenuItem fx:id="logout_btn" mnemonicParsing="false" onAction="#logoutButton" text="Logout" />
+               </items>
+            </MenuButton>
+                  <Separator minHeight="-Infinity" orientation="VERTICAL" prefHeight="35.0" />
+                  <Button fx:id="btn_exit" mnemonicParsing="false" onAction="#handleExitButtonAction" prefHeight="38.0" prefWidth="40.0" styleClass="signout_btn" />
+               </children>
+            </HBox>
+            <HBox layoutX="21.0" layoutY="566.0" prefHeight="33.0" prefWidth="1166.0" styleClass="bar">
+               <children>
+                  <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" styleClass="facebook_btn" />
+                  <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+                  <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" styleClass="googleplus_btn" />
+                  <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+                  <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="googlemap_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+                  <Pane minHeight="-Infinity" prefHeight="30.0" prefWidth="965.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="internet_btn" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="-4.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="22.0" prefWidth="22.0" styleClass="internet_btn" />
+                  <Label fx:id="online_label" layoutX="24.0" layoutY="6.0" prefHeight="20.0" prefWidth="80.0" />
+                  <Label fx:id="etatNewsletter" alignment="CENTER" contentDisplay="CENTER" layoutX="271.0" layoutY="5.0" prefHeight="20.0" prefWidth="427.0" />
+               </children></Pane>
+                  <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="487.0" text="(c) 2015 H4Y3 All Rights Reserved" />
+               </children>
+            </HBox>
+      <Button fx:id="navTop20Hotels" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="287.0" layoutY="111.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setNavigation" prefHeight="106.0" prefWidth="159.0" styleClass="bestHotel_btn" text="Top 10 Hotels" />
+      <Button fx:id="navTop20Restaurants" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="482.0" layoutY="96.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setNavigation" prefHeight="137.0" prefWidth="208.0" styleClass="bestRest_btn" text="Top 10 Restaurants" />
+      <Button fx:id="navTop20Villes" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="702.0" layoutY="96.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setNavigation" prefHeight="137.0" prefWidth="208.0" styleClass="bestCities_btn" text="Top 10 Villes" />
+      <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="924.0" layoutY="393.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="137.0" prefWidth="208.0" styleClass="bestComp_btn" text="Top 20 Compagnies" />
+      <Button fx:id="navGuides" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="43.0" layoutY="394.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setNavigation" prefHeight="137.0" prefWidth="427.0" styleClass="bestGuides_btn" text="Guides" />
+      <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="482.0" layoutY="394.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="137.0" prefWidth="427.0" styleClass="bestExper_btn" text="Experience" />
+      <Pane fx:id="ProfilePane" layoutX="922.0" layoutY="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="208.0" styleClass="profile_pane">
+         <children>
+            <ImageView fx:id="profile_pic" fitHeight="49.0" fitWidth="50.0" layoutX="26.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="fName" layoutX="90.0" layoutY="34.0" style="-fx-font-size: 18;" />
+            <Label fx:id="lName" layoutX="90.0" layoutY="60.0" style="-fx-font-size: 18;" />
+            <Label fx:id="points" layoutX="90.0" layoutY="85.0" prefHeight="23.0" prefWidth="98.0" />
+            <Label fx:id="email" layoutX="14.0" layoutY="118.0" prefHeight="23.0" prefWidth="181.0" />
+            <Label fx:id="typeC" layoutX="14.0" layoutY="141.0" prefHeight="23.0" prefWidth="181.0" />
+            <Label fx:id="numTel" layoutX="14.0" layoutY="187.0" prefHeight="23.0" prefWidth="181.0" />
+            <Label fx:id="adresse" layoutX="14.0" layoutY="164.0" prefHeight="23.0" prefWidth="181.0" />
+            <ToggleButton fx:id="newsletterToggleBtn" contentDisplay="CENTER" layoutX="13.0" layoutY="216.0" mnemonicParsing="false" onAction="#rotate" prefHeight="49.0" prefWidth="182.0" styleClass="toggle" textAlignment="CENTER" wrapText="true" />
+         </children></Pane>
+      <Pane layoutX="43.0" layoutY="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="208.0" styleClass="nav_pane">
+         <children>
+            <Button fx:id="navHotelsBtn" layoutX="13.0" layoutY="33.0" mnemonicParsing="false" onAction="#setNavigation" prefHeight="23.0" prefWidth="181.0" styleClass="btn-success" text="Liste d'Hotels" />
+            <Button fx:id="navRestaurantsBtn" layoutX="13.0" layoutY="73.0" mnemonicParsing="false" onAction="#setNavigation" prefHeight="23.0" prefWidth="181.0" styleClass="btn-blue" text="Liste de Restaurants" />
+            <Button fx:id="navPaysBtn" layoutX="13.0" layoutY="153.0" mnemonicParsing="false" onAction="#setNavigation" prefHeight="23.0" prefWidth="181.0" styleClass="btn-danger" text="Liste de Pays" />
+            <Button fx:id="navVillesBtn" layoutX="13.0" layoutY="113.0" mnemonicParsing="false" onAction="#setNavigation" prefHeight="23.0" prefWidth="181.0" styleClass="btn-warning" text="Liste de Villes" />
+            <Button fx:id="navContactBtn" layoutX="14.0" layoutY="193.0" mnemonicParsing="false" onAction="#setNavigation" prefHeight="23.0" prefWidth="181.0" styleClass="btn-primary" text="Contact" />
+            <Button fx:id="navAboutBtn" layoutX="14.0" layoutY="233.0" mnemonicParsing="false" onAction="#setNavigation" prefHeight="23.0" prefWidth="181.0" styleClass="btn-gray" text="A Propos" />
+         </children></Pane>
+      <Pane layoutX="382.0" layoutY="239.0" prefHeight="137.0" prefWidth="427.0">
+         <children>
+            <ImageView fx:id="sliderPart" fitHeight="123.0" fitWidth="452.0" layoutX="33.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../RESSOURCES/images/logo-groupe.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Button layoutX="287.0" layoutY="267.0" mnemonicParsing="false" onAction="#test" styleClass="btn-success" text="Button" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="1200.0" styleClass="h6" stylesheets="@../../RESSOURCES/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="travelSmart.GUI.FXML.AfficheHotelController">
+   <children>
+      <HBox layoutX="21.0" layoutY="566.0" prefHeight="33.0" prefWidth="1166.0" styleClass="bar">
+         <children>
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" styleClass="facebook_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" styleClass="googleplus_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="googlemap_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Pane minHeight="-Infinity" prefHeight="30.0" prefWidth="965.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="internet_btn" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="-4.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="22.0" prefWidth="22.0" styleClass="internet_btn" />
+                  <Label fx:id="online_label" layoutX="24.0" layoutY="6.0" prefHeight="20.0" prefWidth="80.0" />
+                  <Label fx:id="etatNewsletter" alignment="CENTER" contentDisplay="CENTER" layoutX="271.0" layoutY="5.0" prefHeight="20.0" prefWidth="427.0" />
+               </children>
+            </Pane>
+            <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="487.0" text="(c) 2015 H4Y3 All Rights Reserved" />
+         </children>
+      </HBox>
+      <HBox fx:id="hboxNav" layoutX="17.0" layoutY="20.0" prefHeight="39.0" prefWidth="1166.0" styleClass="bar">
+         <children>
+            <ImageView fx:id="logo" fitHeight="35.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" styleClass="logo_btn">
+               <image>
+                  <Image url="@../../RESSOURCES/images/logo-travelSmart.png" />
+               </image>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="24.0" prefWidth="4.0" />
+            <Button fx:id="homeBtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showHome" prefHeight="35.0" prefWidth="45.0" styleClass="home_btn" />
+            <Pane prefHeight="40.0" prefWidth="269.0" HBox.hgrow="ALWAYS" />
+            <MenuButton fx:id="notif_btn" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="57.0" styleClass="notif_btn">
+               <items>
+                  <MenuItem fx:id="newMessages" mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" />
+               </items>
+            </MenuButton>
+            <Button fx:id="dashbord_btn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showStats" prefHeight="35.0" styleClass="pie_btn" text="Dashbord" />
+            <MenuButton fx:id="userMenu" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="154.0" styleClass="profile_btn" text="Name" HBox.hgrow="ALWAYS">
+               <items>
+                  <MenuItem disable="true" mnemonicParsing="false" text="Profile" />
+                  <MenuItem fx:id="logout_btn" mnemonicParsing="false" onAction="#logoutButton" text="Logout" />
+               </items>
+            </MenuButton>
+            <Separator minHeight="-Infinity" orientation="VERTICAL" prefHeight="35.0" />
+            <Button fx:id="btn_exit" mnemonicParsing="false" onAction="#handleExitButtonAction" prefHeight="38.0" prefWidth="40.0" styleClass="signout_btn" />
+         </children>
+      </HBox>
+      <Pane layoutX="29.0" layoutY="84.0" prefHeight="219.0" prefWidth="462.0">
+         <children>
+            <ImageView fx:id="imagePays" fitHeight="124.0" fitWidth="144.0" layoutX="22.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../RESSOURCES/images/pays.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nomHotel" layoutX="159.0" layoutY="18.0" style="-fx-font-size: 16;">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label fx:id="Categorie" layoutX="159.0" layoutY="65.0" style="-fx-font-size: 16;" />
+            <Label fx:id="Description" layoutX="159.0" layoutY="156.0" style="-fx-font-size: 16;" />
+         </children>
+      </Pane>
+      <Pane fx:id="comment_pane" layoutX="29.0" layoutY="307.0" prefHeight="243.0" prefWidth="462.0" style="-fx-background-color: #FEFEE2;">
+         <children>
+            <ListView fx:id="comment_list" prefHeight="243.0" prefWidth="462.0" />
+         </children></Pane>
+      <ImageView fitHeight="150.0" fitWidth="175.0" layoutX="604.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="175.0" layoutX="781.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="175.0" layoutX="958.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" />
+      <WebView fx:id="webView" layoutX="506.0" layoutY="157.0" prefHeight="380.0" prefWidth="576.0" />
+   </children>
+</AnchorPane>

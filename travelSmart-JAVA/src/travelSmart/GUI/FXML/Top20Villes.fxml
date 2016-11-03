@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="1200.0" stylesheets="@../../RESSOURCES/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="travelSmart.GUI.FXML.Top20VillesController">
+   <children>
+      <HBox fx:id="hboxNav" layoutX="27.0" layoutY="30.0" prefHeight="39.0" prefWidth="1166.0" styleClass="bar">
+         <children>
+            <ImageView fx:id="logo" fitHeight="35.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" styleClass="logo_btn">
+               <image>
+                  <Image url="@../../RESSOURCES/images/logo-travelSmart.png" />
+               </image>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="24.0" prefWidth="4.0" />
+            <Button fx:id="homeBtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showHome" prefHeight="35.0" prefWidth="45.0" styleClass="home_btn" />
+            <Pane prefHeight="40.0" prefWidth="269.0" HBox.hgrow="ALWAYS" />
+            <Separator minHeight="-Infinity" orientation="VERTICAL" prefHeight="35.0" />
+            <Button fx:id="btn_exit" mnemonicParsing="false" onAction="#handleExitButtonAction" prefHeight="38.0" prefWidth="40.0" styleClass="signout_btn" />
+         </children>
+      </HBox>
+      <HBox layoutX="31.0" layoutY="576.0" prefHeight="33.0" prefWidth="1166.0" styleClass="bar">
+         <children>
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" styleClass="facebook_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" styleClass="googleplus_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="googlemap_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Pane minHeight="-Infinity" prefHeight="30.0" prefWidth="965.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="internet_btn" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="-4.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="22.0" prefWidth="22.0" styleClass="internet_btn" />
+                  <Label fx:id="online_label" layoutX="24.0" layoutY="6.0" prefHeight="20.0" prefWidth="80.0" />
+                  <Label fx:id="etatNewsletter" alignment="CENTER" contentDisplay="CENTER" layoutX="271.0" layoutY="5.0" prefHeight="20.0" prefWidth="427.0" />
+               </children>
+            </Pane>
+            <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="487.0" text="(c) 2015 H4Y3 All Rights Reserved" />
+         </children>
+      </HBox>
+      <Pane layoutX="22.0" layoutY="102.0" prefHeight="451.0" prefWidth="1157.0">
+         <children>
+            <ListView fx:id="ville_list" layoutX="118.0" layoutY="14.0" prefHeight="423.0" prefWidth="386.0" />
+            <ListView fx:id="ville_list1" layoutX="629.0" layoutY="14.0" prefHeight="423.0" prefWidth="386.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

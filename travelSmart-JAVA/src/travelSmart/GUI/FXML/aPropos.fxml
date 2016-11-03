@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="475.0" stylesheets="@../../RESSOURCES/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="travelSmart.GUI.FXML.AProposController">
+   <children>
+      <ImageView fitHeight="71.0" fitWidth="202.0" layoutX="4.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../RESSOURCES/images/logo-groupe.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="closeBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="207.0" layoutY="335.0" mnemonicParsing="false" onAction="#closeScene" styleClass="btn-danger" text="Fermer" />
+      <Hyperlink fx:id="contactForm" layoutX="376.0" layoutY="354.0" onAction="#contactForm" styleClass="h5" text="Contact" />
+      <ImageView fitHeight="32.0" fitWidth="38.0" layoutX="433.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../RESSOURCES/images/right.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="116.0" fitWidth="454.0" layoutX="10.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../RESSOURCES/images/logo-travelSmart.png" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_LEFT" layoutX="206.0" layoutY="129.0" lineSpacing="2.0" prefHeight="128.0" prefWidth="262.0" style="-fx-border-style: dotted;" text="Young Engineers (H4Y3) est un groupe de developpeurs motivé ayant accompli au cours du cursus universitaire à L'Ecole Supérieure Privée D'ingénierie et de Technologies, un projet d'intégration portant sur le thème d'une application Multi-Plateforme de partage d'épérience de voyage." textAlignment="JUSTIFY" wrapText="true" />
+      <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="267.0" lineSpacing="2.0" prefHeight="63.0" prefWidth="448.0" style="-fx-font-size: 13px; -fx-border-style: dotted;" text="Ce projet, intitulé travelSmort (c) est le fruit d'un effort complémentaire des membres du groupe, ainsi, qu'au bon encadrement des tuteurs de l'équipe GL, JAVA et WEB." wrapText="true" />
+   </children>
+</AnchorPane>

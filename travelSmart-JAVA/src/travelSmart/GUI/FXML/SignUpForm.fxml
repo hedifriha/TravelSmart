@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="475.0" stylesheets="@../../RESSOURCES/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="travelSmart.GUI.FXML.SignUpFormController">
+
+   <children>
+      <Hyperlink fx:id="link_signIn" layoutX="335.0" layoutY="361.0" onMouseClicked="#clicked" prefHeight="26.0" prefWidth="102.0" text="Déja Inscrit?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="52.0" fitWidth="55.0" layoutX="423.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../RESSOURCES/images/right.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="109.0" fitWidth="470.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../RESSOURCES/images/logo-travelSmart.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="nomText" layoutX="52.0" layoutY="183.0" onKeyReleased="#verifDataEntered" prefHeight="28.0" prefWidth="185.0" promptText="Nom" />
+      <TextField fx:id="prenomText" layoutX="258.0" layoutY="183.0" onKeyReleased="#verifDataEntered" prefHeight="28.0" prefWidth="201.0" promptText="Prénom" />
+      <TextField fx:id="emailText" layoutX="52.0" layoutY="258.0" onKeyReleased="#verifDataEntered" prefHeight="28.0" prefWidth="185.0" promptText="E-mail" />
+      <TextField fx:id="phoneText" layoutX="52.0" layoutY="329.0" onKeyReleased="#verifDataEntered" prefHeight="28.0" prefWidth="185.0" promptText="Numéro de Téléphone" />
+      <TextField fx:id="adresseText" layoutX="52.0" layoutY="293.0" onKeyReleased="#verifDataEntered" prefHeight="28.0" prefWidth="185.0" promptText="Adresse" />
+      <Button fx:id="btn_signUp" layoutX="258.0" layoutY="291.0" mnemonicParsing="false" onAction="#Inscription" prefHeight="32.0" prefWidth="108.0" styleClass="btn-success" text="Inscription" />
+      <Button fx:id="btn_exit" layoutX="372.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleExitButtonAction" prefHeight="32.0" prefWidth="85.0" styleClass="btn-warning" text="Fermer" />
+      <ImageView fitHeight="45.0" fitWidth="46.0" layoutX="6.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../RESSOURCES/images/user.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="passwordText" layoutX="52.0" layoutY="221.0" onKeyReleased="#verifDataEntered" prefHeight="28.0" prefWidth="185.0" promptText="Mot de Passe" />
+      <PasswordField fx:id="passwordVerifText" layoutX="258.0" layoutY="221.0" onKeyReleased="#verifDataEntered" prefHeight="28.0" prefWidth="201.0" promptText="Verifiez le Mot de Passe" />
+      <ImageView fitHeight="45.0" fitWidth="46.0" layoutX="6.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../RESSOURCES/images/password.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="46.0" layoutX="6.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../RESSOURCES/images/email.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="46.0" layoutX="6.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../RESSOURCES/images/home.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="46.0" layoutX="6.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../RESSOURCES/images/phone.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelStatus" layoutX="41.0" layoutY="131.0" prefHeight="28.0" prefWidth="418.0" />
+      <ImageView fx:id="imgInfo" fitHeight="45.0" fitWidth="45.0" layoutX="6.0" layoutY="123.0">
+         <image>
+            <Image url="@../../RESSOURCES/images/info.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

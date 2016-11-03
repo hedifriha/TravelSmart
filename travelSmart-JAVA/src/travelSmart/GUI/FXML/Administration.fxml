@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1200.0" stylesheets="@../../RESSOURCES/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="travelSmart.GUI.FXML.AdministrationController">
+   <children>
+      <HBox layoutX="21.0" layoutY="566.0" prefHeight="33.0" prefWidth="1166.0" styleClass="bar">
+         <children>
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" styleClass="facebook_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" styleClass="googleplus_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="googlemap_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Pane minHeight="-Infinity" prefHeight="30.0" prefWidth="965.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="internet_btn" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="-4.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="22.0" prefWidth="22.0" styleClass="internet_btn" />
+                  <Label fx:id="online_label" layoutX="24.0" layoutY="6.0" prefHeight="20.0" prefWidth="80.0" />
+                  <Label fx:id="etatNewsletter" alignment="CENTER" contentDisplay="CENTER" layoutX="271.0" layoutY="5.0" prefHeight="20.0" prefWidth="427.0" />
+               </children>
+            </Pane>
+            <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="487.0" text="(c) 2015 H4Y3 All Rights Reserved" />
+         </children>
+      </HBox>
+      <HBox fx:id="hboxNav" layoutX="17.0" layoutY="20.0" prefHeight="40.0" prefWidth="1166.0" styleClass="bar">
+         <children>
+            <ImageView fx:id="logo" fitHeight="35.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" styleClass="logo_btn">
+               <image>
+                  <Image url="@../../RESSOURCES/images/logo-travelSmart.png" />
+               </image>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="24.0" prefWidth="4.0" />
+            <Button fx:id="homeBtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showHome" prefHeight="35.0" prefWidth="45.0" styleClass="home_btn" />
+            <Pane prefHeight="40.0" prefWidth="269.0" HBox.hgrow="ALWAYS" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" styleClass="search_btn">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <TextField prefHeight="33.0" prefWidth="201.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+            </TextField>
+            <MenuButton fx:id="notif_btn" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="57.0" styleClass="notif_btn">
+               <items>
+                  <MenuItem fx:id="newMessages" mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" />
+               </items>
+            </MenuButton>
+            <Button fx:id="dashbord_btn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" styleClass="pie_btn" text="Dashbord">
+               <padding>
+                  <Insets top="5.0" />
+               </padding></Button>
+            <MenuButton fx:id="userMenu" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" styleClass="profile_btn" text="Admin" HBox.hgrow="ALWAYS">
+               <items>
+                  <MenuItem disable="true" mnemonicParsing="false" text="Profile" />
+                  <MenuItem fx:id="logout_btn" mnemonicParsing="false" onAction="#logoutButton" text="Logout" />
+               </items>
+            </MenuButton>
+            <Separator minHeight="-Infinity" orientation="VERTICAL" prefHeight="35.0" />
+            <Button fx:id="btn_exit" mnemonicParsing="false" onAction="#handleExitButtonAction" prefHeight="38.0" prefWidth="40.0" styleClass="signout_btn" />
+         </children>
+      </HBox>
+      <MenuButton alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="97.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="42.0" prefWidth="399.0" style="-fx-font-size: 16px;" styleClass="btn-success" text="Statistiques, Newsletter &amp; Cmpagnies de Voyage">
+        <items>
+          <MenuItem fx:id="showStats" mnemonicParsing="false" onAction="#viewStats" text="Statistiques" />
+          <MenuItem fx:id="senNewsBtn" mnemonicParsing="false" onAction="#sendEmailNews" text="Send Newsletter" />
+            <MenuItem fx:id="listCompagnies" mnemonicParsing="false" onAction="#viewCompagnies" text="Lister les Compagnies" />
+            <MenuItem fx:id="addCompagnie" mnemonicParsing="false" onAction="#viewCompagnies" text="Ajouter une Compagnie" />
+        </items>
+      </MenuButton>
+      <MenuButton alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="157.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="42.0" prefWidth="399.0" style="-fx-font-size: 16;" styleClass="btn-danger" text="Gestion d'Utilisateurs">
+         <items>
+            <MenuItem fx:id="allUsers" mnemonicParsing="false" onAction="#viewUsers" text="Tous les Utilisateurs" />
+            <MenuItem fx:id="newUsers" mnemonicParsing="false" onAction="#viewUsers" text="Utilisateurs à Valider" />
+         </items>
+      </MenuButton>
+      <MenuButton alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="217.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="42.0" prefWidth="399.0" style="-fx-font-size: 16;" styleClass="btn-warning" text="Gestion de Pays">
+         <items>
+            <MenuItem fx:id="listPays" mnemonicParsing="false" onAction="#viewPays" text="Liste des Pays" />
+            <MenuItem fx:id="addPays" mnemonicParsing="false" onAction="#viewPays" text="Ajouter Un Pays" />
+            <MenuItem fx:id="editPays" mnemonicParsing="false" onAction="#viewPays" text="Modifier Un Pays" />
+         </items>
+      </MenuButton>
+      <MenuButton alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="397.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="42.0" prefWidth="399.0" style="-fx-font-size: 16;" styleClass="btn-blue" text="Gestion de Villes">
+         <items>
+            <MenuItem fx:id="listVilles" mnemonicParsing="false" onAction="#viewVilles" text="Liste des Villes" />
+            <MenuItem fx:id="addVille" mnemonicParsing="false" onAction="#viewVilles" text="Ajouter Une Ville" />
+            <MenuItem fx:id="editVille" mnemonicParsing="false" onAction="#viewVilles" text="Modifier Une Ville" />
+         </items>
+      </MenuButton>
+      <MenuButton alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="337.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="42.0" prefWidth="399.0" style="-fx-font-size: 16;" styleClass="btn-info" text="Gestion des Hotels">
+         <items>
+            <MenuItem fx:id="listHotels" mnemonicParsing="false" onAction="#viewHotels" text="Liste des Hotels" />
+            <MenuItem fx:id="addHotel" mnemonicParsing="false" onAction="#viewHotels" text="Ajouter Un Hotel" />
+            <MenuItem fx:id="editHotel" mnemonicParsing="false" onAction="#viewHotels" text="Modifier Un Hotel" />
+         </items>
+      </MenuButton>
+      <MenuButton alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="277.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="42.0" prefWidth="399.0" style="-fx-font-size: 16;" styleClass="btn-primary" text="Gestion de Restaurants">
+         <items>
+            <MenuItem fx:id="listRestaurants" mnemonicParsing="false" onAction="#viewRestaurants" text="Liste des Restaurants" />
+            <MenuItem fx:id="addRestaurant" mnemonicParsing="false" onAction="#viewRestaurants" text="Ajouter Un Restaurant" />
+            <MenuItem fx:id="editRestaurant" mnemonicParsing="false" onAction="#viewRestaurants" text="Modifier Un Restaurant" />
+         </items>
+      </MenuButton>
+      <MenuButton alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="457.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="42.0" prefWidth="399.0" style="-fx-font-size: 16;" styleClass="btn-gray" text="Gestion des Guides &amp; Experiences">
+         <items>
+            <MenuItem fx:id="guides" mnemonicParsing="false" onAction="#viewMessages" text="Guides" />
+            <MenuItem fx:id="experiences" disable="true" mnemonicParsing="false" onAction="#viewMessages" text="Experiences de Voyage" />
+         </items>
+      </MenuButton>
+      <MenuButton alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="518.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="42.0" prefWidth="399.0" style="-fx-font-size: 16;" styleClass="btn-default" text="Messagerie">
+         <items>
+            <MenuItem fx:id="consulterMsgNL" mnemonicParsing="false" onAction="#viewMessages" text="Messages non lus" />
+            <MenuItem fx:id="consulterMsgL" mnemonicParsing="false" onAction="#viewMessages" text="Consulter les messages" />
+         </items>
+      </MenuButton>
+      <ListView fx:id="showPane" layoutX="434.0" layoutY="97.0" prefHeight="463.0" prefWidth="748.0" />
+      <Label fx:id="breadcrumb" alignment="CENTER" contentDisplay="CENTER" layoutX="600.0" layoutY="62.0" prefHeight="31.0" prefWidth="427.0" style="-fx-font-size: 20;" />
+      <Pane fx:id="PaneImagePays" layoutX="473.0" layoutY="395.0" prefHeight="162.0" prefWidth="400.0" visible="false">
+         <children>
+            <GridPane fx:id="gridPaneImagePays" alignment="CENTER" gridLinesVisible="true" layoutX="12.0" layoutY="5.0" prefHeight="120.0" prefWidth="374.0">
+               <children>
+                  <ImageView fx:id="imgViewPays1" fitHeight="120.0" fitWidth="120.0" onMouseEntered="#hoverImageViewEnter" onMouseExited="#hoverImageViewExit" pickOnBounds="true" preserveRatio="true" visible="false" />
+                  <ImageView fx:id="imgViewPays2" fitHeight="120.0" fitWidth="120.0" onMouseEntered="#hoverImageViewEnter" onMouseExited="#hoverImageViewExit" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fx:id="imgViewPays3" fitHeight="120.0" fitWidth="120.0" onMouseEntered="#hoverImageViewEnter" onMouseExited="#hoverImageViewExit" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </ImageView>
+                  <Button fx:id="btn_plusPays1" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#ImageHandler" prefHeight="35.0" prefWidth="35.0" styleClass="btn_plus">
+                     <GridPane.margin>
+                        <Insets left="42.5" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_plusPays2" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#ImageHandler" prefHeight="35.0" prefWidth="35.0" styleClass="btn_plus" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="42.5" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_plusPays3" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#ImageHandler" prefHeight="35.0" prefWidth="35.0" styleClass="btn_plus" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets left="42.5" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_moinsPays1" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: rgba(255,255,255,0.8);" styleClass="btn_moins" visible="false">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_moinsPays2" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: rgba(255,255,255,0.8);" styleClass="btn_moins" visible="false" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_moinsPays3" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: rgba(255,255,255,0.8);" styleClass="btn_moins" visible="false" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints maxWidth="-Infinity" minWidth="120.0" prefWidth="120.0" />
+                  <ColumnConstraints maxWidth="-Infinity" minWidth="120.0" prefWidth="120.0" />
+                  <ColumnConstraints maxWidth="-Infinity" minWidth="120.0" prefWidth="120.0" />
+               </columnConstraints>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="120.0" prefHeight="120.0" />
+               </rowConstraints>
+            </GridPane>
+            <Button fx:id="btnmPays1" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" graphicTextGap="1.0" layoutX="67.0" layoutY="132.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#DelImageHandler" onMouseEntered="#hoverImageViewEnter" onMouseExited="#hoverImageViewExit" prefHeight="6.0" prefWidth="24.0" style="-fx-background-color: red;" styleClass="btn_moins" visible="false" />
+            <Button fx:id="btnmPays2" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" graphicTextGap="1.0" layoutX="188.0" layoutY="132.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#DelImageHandler" onMouseEntered="#hoverImageViewEnter" onMouseExited="#hoverImageViewExit" prefHeight="6.0" prefWidth="24.0" style="-fx-background-color: red;" styleClass="btn_moins" visible="false" />
+            <Button fx:id="btnmPays3" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" graphicTextGap="1.0" layoutX="307.0" layoutY="132.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#DelImageHandler" onMouseEntered="#hoverImageViewEnter" onMouseExited="#hoverImageViewExit" prefHeight="6.0" prefWidth="24.0" style="-fx-background-color: red;" styleClass="btn_moins" visible="false" />
+            <Label fx:id="label_infoPays" layoutX="143.0" layoutY="138.0" prefHeight="20.0" prefWidth="98.0" />
+         </children></Pane>
+      <Pane fx:id="PaneImageVille" layoutX="473.0" layoutY="395.0" prefHeight="162.0" prefWidth="400.0" visible="false">
+         <children>
+            <GridPane fx:id="gridPaneImageVille" alignment="CENTER" gridLinesVisible="true" layoutX="12.0" layoutY="5.0" prefHeight="120.0" prefWidth="374.0">
+               <children>
+                  <ImageView fx:id="imgViewVille1" fitHeight="120.0" fitWidth="120.0" onMouseEntered="#hoverImageViewEnter" onMouseExited="#hoverImageViewExit" pickOnBounds="true" preserveRatio="true" visible="false" />
+                  <ImageView fx:id="imgViewVille2" fitHeight="120.0" fitWidth="120.0" onMouseEntered="#hoverImageViewEnter" onMouseExited="#hoverImageViewExit" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fx:id="imgViewVille3" fitHeight="120.0" fitWidth="120.0" onMouseEntered="#hoverImageViewEnter" onMouseExited="#hoverImageViewExit" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </ImageView>
+                  <Button fx:id="btn_plusVille1" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#ImageHandler" prefHeight="35.0" prefWidth="35.0" styleClass="btn_plus">
+                     <GridPane.margin>
+                        <Insets left="42.5" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_plusVille2" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#ImageHandler" prefHeight="35.0" prefWidth="35.0" styleClass="btn_plus" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="42.5" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_plusVille3" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#ImageHandler" prefHeight="35.0" prefWidth="35.0" styleClass="btn_plus" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets left="42.5" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_moinsVille1" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: rgba(255,255,255,0.8);" styleClass="btn_moins" visible="false">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_moinsVille2" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: rgba(255,255,255,0.8);" styleClass="btn_moins" visible="false" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_moinsVille3" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: rgba(255,255,255,0.8);" styleClass="btn_moins" visible="false" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints maxWidth="-Infinity" minWidth="120.0" prefWidth="120.0" />
+                  <ColumnConstraints maxWidth="-Infinity" minWidth="120.0" prefWidth="120.0" />
+                  <ColumnConstraints maxWidth="-Infinity" minWidth="120.0" prefWidth="120.0" />
+               </columnConstraints>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="120.0" prefHeight="120.0" />
+               </rowConstraints>
+            </GridPane>
+            <Button fx:id="btnmVille3" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" graphicTextGap="1.0" layoutX="307.0" layoutY="132.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#DelImageHandler" onMouseEntered="#hoverImageViewEnter" onMouseExited="#hoverImageViewExit" prefHeight="6.0" prefWidth="24.0" style="-fx-background-color: red;" styleClass="btn_moins" visible="false" />
+            <Button fx:id="btnmVille2" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" graphicTextGap="1.0" layoutX="188.0" layoutY="132.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#DelImageHandler" onMouseEntered="#hoverImageViewEnter" onMouseExited="#hoverImageViewExit" prefHeight="6.0" prefWidth="24.0" style="-fx-background-color: red;" styleClass="btn_moins" visible="false" />
+            <Button fx:id="btnmVille1" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" graphicTextGap="1.0" layoutX="67.0" layoutY="132.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#DelImageHandler" onMouseEntered="#hoverImageViewEnter" onMouseExited="#hoverImageViewExit" prefHeight="6.0" prefWidth="24.0" style="-fx-background-color: red;" styleClass="btn_moins" visible="false" />
+            <Label fx:id="label_infoVille" layoutX="143.0" layoutY="138.0" prefHeight="20.0" prefWidth="98.0" />
+         </children></Pane>
+      <Pane fx:id="PaneImageHotel" layoutX="473.0" layoutY="395.0" prefHeight="162.0" prefWidth="400.0" visible="false" />
+      <Pane fx:id="PaneImageRestaurant" layoutX="473.0" layoutY="395.0" prefHeight="162.0" prefWidth="400.0" visible="false" />
+   </children>
+</AnchorPane>

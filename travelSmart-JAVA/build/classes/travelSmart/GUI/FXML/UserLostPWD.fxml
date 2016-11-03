@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="475.0" stylesheets="@../../RESSOURCES/style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="travelSmart.GUI.FXML.UserLostPWDController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="157.0" layoutX="103.0" layoutY="171.0" stroke="#0c0cc7ab" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="288.0" />
+      <Hyperlink fx:id="link_retour" layoutX="45.0" layoutY="361.0" onMouseClicked="#clicked_alpha" text="Retour">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="109.0" fitWidth="470.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="277.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="14.14227294921875" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@../../RESSOURCES/images/logo-travelSmart.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="usernameText" layoutX="157.0" layoutY="208.0" prefHeight="35.0" prefWidth="204.0" promptText="Email" />
+      <Button fx:id="btn_envoyer" layoutX="199.0" layoutY="269.0" mnemonicParsing="false" onAction="#envoyerMail" prefHeight="35.0" prefWidth="102.0" styleClass="btn-success" text="Envoyer" />
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="100.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../RESSOURCES/images/user.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelStatus" layoutX="41.0" layoutY="131.0" prefHeight="28.0" prefWidth="418.0" />
+      <ImageView fx:id="imgInfo" fitHeight="45.0" fitWidth="45.0" layoutX="6.0" layoutY="123.0">
+         <image>
+            <Image url="@../../RESSOURCES/images/info.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="55.0" layoutY="348.0">
+         <image>
+            <Image url="@../../RESSOURCES/images/left.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

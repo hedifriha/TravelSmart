@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="travelSmart-PIDEV.jnlp">
+  <information>
+    <title>travelSmart-PIDEV</title>
+    <vendor>reznov</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="8.0+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib/commons-net-3.3.jar" size="280983" download="eager" />
+    <jar href="lib/dsn.jar" size="18073" download="eager" />
+    <jar href="lib/imap.jar" size="172582" download="eager" />
+    <jar href="lib/itextpdf-5.2.1.jar" size="1735175" download="eager" />
+    <jar href="lib/javax.mail-1.5.1.jar" size="545362" download="eager" />
+    <jar href="lib/mailapi.jar" size="250234" download="eager" />
+    <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="827921" download="eager" />
+    <jar href="lib/pop3.jar" size="36334" download="eager" />
+    <jar href="lib/smslib-3.5.4.jar" size="356304" download="eager" />
+    <jar href="lib/smtp.jar" size="44993" download="eager" />
+    <jar href="travelSmart-PIDEV.jar" size="4962537" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="travelSmart-PIDEV" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="travelSmart.PIDEV.Launcher"  name="travelSmart-PIDEV" />
+  <update check="always"/>
+</jnlp>

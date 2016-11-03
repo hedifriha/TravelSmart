@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="travelSmart.GUI.FXML.AddRestaurantsController">
+   <children>
+      <HBox layoutX="17.0" layoutY="30.0" prefHeight="39.0" prefWidth="1166.0" styleClass="bar">
+         <children>
+            <ImageView fx:id="logo" fitHeight="35.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" styleClass="logo_btn">
+               <image>
+                  <Image url="@assets/css/logo-travelSmart.png" />
+               </image>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="24.0" prefWidth="4.0" />
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="45.0" styleClass="home_btn" />
+            <Pane prefHeight="35.0" prefWidth="566.0" HBox.hgrow="ALWAYS" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" styleClass="search_btn">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+            <TextField prefHeight="0.0" prefWidth="175.0">
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <MenuButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="57.0" styleClass="notif_btn">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </MenuButton>
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" styleClass="pie_btn" text="Stats" />
+            <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" styleClass="profile_btn" text="Name">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+               <cursor>
+               </cursor>
+            </MenuButton>
+            <Separator minHeight="-Infinity" orientation="VERTICAL" prefHeight="35.0" />
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="40.0" styleClass="signout_btn" />
+         </children>
+      </HBox>
+      <HBox layoutX="21.0" layoutY="566.0" prefHeight="33.0" prefWidth="1166.0" style="-fx-border-width: 2; -fx-border-style: solid; -fx-border-color: #F3F0F0; -fx-border-radius: 8px; -fx-background-color: #F9F9F9; -fx-background-radius: 8px; -fx-opacity: 0.8;">
+         <children>
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" styleClass="facebook_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" styleClass="googleplus_btn" />
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="22.0" />
+            <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="googlemap_btn" />
+            <Pane minHeight="-Infinity" prefHeight="30.0" prefWidth="965.0" HBox.hgrow="ALWAYS" />
+            <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="367.0" text="� 2015 H4Y3 All Rights Reserved" />
+         </children>
+      </HBox>
+      <Label layoutX="55.0" layoutY="151.0" prefHeight="37.0" prefWidth="104.0" style="-fx-font-size: 18;" styleClass="text-success" text="Nom" />
+      <Label layoutX="50.0" layoutY="212.0" style="-fx-font-size: 18;" styleClass="text-success" text="Emplacement" />
+      <Label layoutX="55.0" layoutY="373.0" style="-fx-font-size: 18;" styleClass="text-success" text="Categorie" />
+      <Label layoutX="50.0" layoutY="287.0" style="-fx-font-size: 18;" styleClass="text-success" text="Description" />
+      <Label layoutX="59.0" layoutY="450.0" style="-fx-font-size: 18;" styleClass="text-success" text="Image" />
+      <TextField fx:id="nom" layoutX="211.0" layoutY="155.0" prefHeight="30.0" prefWidth="208.0" />
+      <TextArea fx:id="description" layoutX="211.0" layoutY="276.0" prefHeight="68.0" prefWidth="319.0" />
+      <ComboBox fx:id="pays" layoutX="211.0" layoutY="212.0" prefHeight="30.0" prefWidth="142.0" promptText="Pays">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></ComboBox>
+      <ComboBox fx:id="ville" layoutX="382.0" layoutY="212.0" prefHeight="30.0" prefWidth="142.0" promptText="Ville" />
+      <ComboBox fx:id="categorie" layoutX="211.0" layoutY="373.0" prefWidth="150.0" promptText="Categorie" />
+      <Button layoutX="646.0" layoutY="509.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="89.0" styleClass="btn-danger" text="Annuler" />
+      <Button fx:id="add" layoutX="515.0" layoutY="509.0" mnemonicParsing="false" onAction="#processAdd" prefHeight="30.0" prefWidth="89.0" styleClass="btn-success" text="Terminer" />
+      <WebView layoutX="674.0" layoutY="146.0" prefHeight="336.0" prefWidth="477.0" />
+      <Pane layoutX="194.0" layoutY="421.0" prefHeight="126.0" prefWidth="265.0" />
+      <Label layoutX="507.0" layoutY="87.0" style="-fx-font-size: 21;" text="Ajouter Un Restaurant" />
+   </children>
+   <stylesheets>
+      <URL value="@assets/css/style.css" />
+      <URL value="@../../../travelSmart.css" />
+   </stylesheets>
+</AnchorPane>
